@@ -1,0 +1,71 @@
+# Site
+
+title: John Moody
+email:
+meta-title: John Moody - Artist
+description: Paintings, drawings and books created my the artist John Moody.
+url: https://johnmoodyartist.com
+baseurl:
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
+# Build
+
+permalink: pretty
+
+paginate: 5
+paginate_path: "/blog/:num/"
+permalink: '/blog/:name/'
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        content:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  permalinks:
+    tag: '/blog/tag/:name/'
+    category: '/blog/category/:name/'
+
+collections:
+   paintings:
+      output: true
+   drawings:
+      output: true
+
+_comments:
+         width: width in centimetres
+         height: height in centimetres
+         small_image_path: width = 400px x 300px, saved at 80% quality
+         large_image_path: width = 1600px x 1200px, saved at 80% quality
+
+plugins:
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+kramdown:
+    parse_block_html: true
+# -----------
+# CloudCannon

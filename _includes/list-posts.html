@@ -1,0 +1,52 @@
+<div class="w-90 w-80-l center pv4">
+	{% for post in include.posts %}
+	<div class="ba b--light-gray bg-white  mb4">
+
+<div class="bg-white ba b--black-20 flex flex-wrap justify-between items-stretch">
+
+<div class="w-50-ns pa3 pa4-ns flex flex-wrap items-center justify-center items-stretch">
+<a class="pa2 bg-near-white shadow-3 db grow" href="{{ post.url }}"><img class="basic fit h-100"  src="{{ post.image_path }}" alt="{{ post.alt_tag }}"></a>
+</div>
+	<div class="w-50-ns ph3 ph4-l">
+
+	<div class="measure lh-copy">
+	<h2 class="w-100 f4 f4-l"><a class="link black-70" href="{{ post.url }}">{{ post.title }}</a></h2>
+	<p class="f7">Posted by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span> on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>.
+		Category:	{% for category in post.categories %}
+	  <a href="{{ site.baseurl }}/blog/category/{{ category | slugify }}/">{{ category }}</a>
+	  {% endfor %}
+	  </p>
+	{% if post.description %}{{ post.description | markdownify }}{% endif %}
+	</div>
+	<a class="bg-dark-gray white link pa2 dib mv3 f6 " href="{{ post.url }}">Read on...</a>
+	</div>
+	</div>
+	</div>
+
+	  {% endfor %}
+
+		{% if paginator.total_pages > 1 %}
+			<!-- Pagination links -->
+			<div class="pagination">
+				{% if paginator.previous_page %}
+					<a href="{% include relative-src.html src=paginator.previous_page_path %}" class="previous btn">&larr; Newer posts</a>
+				{% endif %}
+
+				<span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+				{% if paginator.next_page %}
+					<a href="{% include relative-src.html src=paginator.next_page_path %}" class="next btn">Older posts &rarr;</a>
+				{% endif %}
+			</div>
+		{% endif %}
+
+
+
+<h3 class="f4">Categories</h3>
+    <ul class="list pa0">
+      <li class="bg-red list ph3 pv2 dib grow mr2"><a class="link white" href="/blog/category/art/">Art</a></li>
+      <li class="bg-blue list ph3 pv2 dib grow"><a class="link white" href="/blog/category/books/">Books</a></li>
+    </ul>
+	</ul>
+
+  </div>

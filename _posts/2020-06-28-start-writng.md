@@ -1,0 +1,21 @@
+---
+layout: post
+meta-title: BE YOUR OWN AUTHOR
+title: START WRITNG
+date: 2020-06-28 13:18:00
+author: J Moody
+categories:
+  - Books
+tags:
+description: You have to start sometime
+image_path: /uploads/blog-images-dare.jpg
+alt_tag: add an alt tag
+---
+
+## START WRITING
+
+I have at least a dozen old diaries on my shelves. From time to time I scan through them. It brings back memories of events and emotions, both sad and happy. Yes, most are very personal and I doubt anyone would be interested in reading them. However buried among all this pile of self analysis, there are some gems of ideas that could turn into stories that were perhaps worth reading. I even found almost two chapters of an adventure story, that I had completely forgotten about. That night I had daydreamed a good enough development, to get me started on it again.
+
+If you don't start, nothing will happen, and you will go on telling yourself that one day when you retire, you may just do it. But the the chances are&nbsp; that you never will.
+
+Anyone can write, sing, play an instrument, despite a strong conviction that they can't. The standard reached may not be worthy of the greats, but it does not have to be.&nbsp; People sing in choirs,they may not be soloists, but are enjoying it. People play instruments or create art for their own pleasure, participating in local events or exhibitions. The same applies to writing, it does not have to be incredible, don't beat yourself up over it. Take a pleasure in using your imagination, the ideas will flow,sometimes fast, sometimes slow, and from time to time not at all. Don't let that stop you, take your time, move forward at your own pace.

@@ -1,0 +1,5 @@
+{% for category in include.post.categories %}
+		<span class="f6">
+			Category: <a class="link white pa1 br3 bg-navy" href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category | capitalize }}</a>
+		</span>
+	{% endfor %}

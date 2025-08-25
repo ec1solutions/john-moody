@@ -1,0 +1,37 @@
+---
+layout: contact
+title: Contact
+meta-title: Contact
+meta-description:
+---
+<div class='bg-light-blue min-vh-100 pt6 pb4 pb5-ns ph3 ph0-ns'>
+<div class='measure-wide center pa3  bg-white-90 page'>
+<h1 class="f2 f1 ma0 editable">Drop me a line.</h1>
+<p class="editable">We are going to make placeholder text great again. Greater than ever before. I know words. I have the best words. This placeholder text is gonna be HUGE.</p>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<form  method="post" action="/thankyou">
+
+        <label class="" for="name">Name</label><br>
+        <input type="text" name="name"  id="name" value=""  class="mb3 w-100 ba br2 pa2"/>
+
+   <div class="">
+        <label class="" for="email">Email</label><br>
+        <input type="email" name="_replyto"  id="email" value=""  class="mb3 w-100 ba br2 pa2"/>
+          </div>
+  <div class="">
+        <label class="" for="subject">Subject</label><br>
+        <input type="text" name="subject"  id="subject" value=""  class="mb3 w-100 ba br2 pa2"/>
+          </div>
+  <div class="">
+        <label class="" for="message">Message</label><br>
+        <textarea  name="message"  id="message"  class="mb3 w-100 ba  br2 pa2"></textarea>
+          </div>
+ <input type="hidden" name="_to" value="shawn@ec1solutions.co.uk,jmoody@gmx.co.uk">
+  <input type="text" name="_gotcha" style="display: none;">
+ <input type="hidden" name="_subject" value="Contact Form Submission">
+<div class="g-recaptcha mb3" data-sitekey="6Ld4L6YZAAAAAPMqOc2ZXai901IaI87UlNPcgjUs"></div>
+            <input type='submit' id='send_message' class="white pa3 db bg-navy bw0 pointer" value='SEND' />
+</form>
+</div>
+</div>

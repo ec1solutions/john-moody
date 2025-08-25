@@ -1,0 +1,24 @@
+
+<nav class="">
+            <input type="checkbox" id="nav" class="dn" /><label class="cf" for="nav"></label>
+            <div class="navInner pa3">
+
+		{% for link in site.data.navigation %}
+		{% assign class = "" %}
+		{% if link.highlight %}
+			{% assign class = class | append: " highlight" %}
+		{% endif %}
+		{% if link.link == page.url %}
+			{% assign class = class | append: " active" %}
+		{% endif %}
+<span class="" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement" itemprop="url"><span itemprop="name"><a href="{% include relative-src.html src=link.link %}" class="db link underline-hover black mv3 f5 ttu">{{ link.name }}</a></span></span>
+	{% endfor %}
+
+
+<div class=''>
+<a href="https://www.facebook.com/john.moody.7771" target="_blank"><svg class="icon icon-facebook2 mr3"><use xlink:href="#icon-facebook2"></use></svg></a>
+<a href="https://www.instagram.com/johnmoodyartist/?hl=es" target="_blank"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a>
+</div>
+</div>
+</nav>
+

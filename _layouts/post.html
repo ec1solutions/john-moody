@@ -1,0 +1,76 @@
+---
+layout: home
+---
+
+<div class="flex-l flex-wrap">
+
+	<img class="basic fit db" src="{{ page.image_path }}" alt="{{ page.alt_tag }}" />
+
+
+	<h1 class="w-100 f3 f2-ns ma0 ph3 pv3 ph6-l white bg-dark-gray">{{ page.title }}</h1>
+    <div class="w-75-l ph3 pv3 ph6-l">
+
+    <p class="f7">By {{ page.author }} | Last updated <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> |
+      {% for category in page.categories %}
+    <a href="{{ site.baseurl }}/blog/category/{{ category | slugify }}/">{{ category }}</a>
+    {% endfor %}
+    </p>
+    <div class="page">
+ {{ content }}
+ <div class="dn db-l">
+ <h3 class="f4">Share this Post</h3>
+    {% include shareButtonsBlog.html %}
+</div>
+  </div>
+  </div>
+    <div class="w-90 w-25-l center">
+
+
+    <h3 class="f4">Share this Post</h3>
+    {% include shareButtonsBlog.html %}
+
+<h3 class="f4">Categories</h3>
+    <ul class="list pa0">
+      <li class="bg-red list ph3 pv2 dib grow mr2"><a class="link white" href="/blog/category/art/">Art</a></li>
+      <li class="bg-blue list ph3 pv2 dib grow"><a class="link white" href="/blog/category/books/">Books</a></li>
+    </ul>
+	</ul>
+
+
+<!-- Schema markup for Blog Posts -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": {{ page.title | jsonify }},
+  "articleBody": {{ page.content | strip_html | jsonify }},
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}{{ page.image_path }}",
+    "width": 570,
+    "height": 350
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.data.authors[page.author].full_name }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Solution Loans",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://guarantor-loans.co.uk/images/logoLge.png",
+      "width": 224,
+      "height": 50
+    }
+  },
+  "datePublished": {{ page.date | jsonify }}
+}
+</script>
+<!-- END schema markeup for blog posts -->
+
+</div></div>

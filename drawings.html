@@ -1,0 +1,14 @@
+---
+layout: home
+title: Drawings
+meta-title: John Moody Drawings
+meta-title: Gallery of drawings by the artsist John Moody
+meta-description:
+---
+<p class="f6 tc">Click on a drawing to view it at a larger size</p>
+<div class="flex flex-wrap">
+{% assign sorted = site.drawings | reverse %}
+{% for item in sorted %}
+<div class="w-90 w-25-ns pa2-ns center mb3 mb0-ns"><a href='{{ site.url }}{{ item.url }}'><img class="basic" src="{{ site.url }}{{ item.small_image_path }}" title="{{ item.title }}" alt="{{ item.title }}"/></a></div>
+{% endfor %}
+</div>

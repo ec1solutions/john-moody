@@ -1,0 +1,13 @@
+---
+layout: blogArchive
+---
+
+
+	{% assign blog = site.pages | where: "path", "blog/index.html" | first %}
+
+		<h1 class="f3 f1-ns tc ma0">{{ page.title | capitalize }}</h1>
+
+
+		{% include list-posts.html posts=page.posts %}
+
+

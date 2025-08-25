@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include defer.html %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+{% if page.meta-title %}<title>{{ page.meta-title }}</title>{% else %}<title>{{ site.meta-title }}</title>{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="EC1 SOLUTIONS LTD" />
+{% if page.meta-description %}<meta name="description" content="{{ page.meta-description }}" />{% else %}<meta name="description" content="{{ site.description }}" />{% endif %}
+<meta name="author" content="{{ site.title }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml">
+<style>{% include css.html %}</style>
+{% include facebook_twitter_og.html %}
+</head>
+<body>

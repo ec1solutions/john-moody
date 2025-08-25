@@ -1,0 +1,9 @@
+I"-<p><img src="http://localhost:4000/uploads/falconlarge.jpg" alt="" class="fit" /></p>
+
+<div class="flex-ns flex-wrap justify-between ph3 ph0-ns">
+  <div class="dib-ns">
+    <h1 class="f5 fw1 mb0">Title: Falcon </h1>
+    <p class="ma0">Size: 111cm x 222cm<br />Medium: ink on paper</p>
+  </div>
+</div>
+:ET

@@ -1,0 +1,33 @@
+{% include head.html %}
+<div class="w-100 w-15 sidebar vh-100-l fixed top-0">
+{% include header.html %}
+<div class="dn db-l absolute left-0 right-0 bottom-0">
+  {% include footer.html %}
+  </div>
+</div>
+<div class="min-vh-100 w-100 w-85 pv5 ph3-l pv3-l">
+<img class='fit' src='{{ site.url }}{{ page.large_image_path }}' alt='{{ page.title }}'>
+  <div class="flex-ns flex-wrap justify-between ph3 ph0-ns">
+  <div class="dib-ns">
+  <h1 class="f5 fw1 mb0">Title: {{ page.title }} {% if page.sold == true %}<span class="bg-red white ph3 pv2 ml3 b">sold</span>{% endif %}</h1>
+  <p class="ma0">Size: {{ page.width}}cm x {{ page.height }}cm<br />Medium: {{ page.medium }}</p>
+  </div>
+  <div class='dib-ns'>
+  {% include shareButtons.html %}
+  </div>
+  <div class='dib-ns  lh-solid mt2'>
+  <a class='link black-80' href='{% if page.url contains 'drawings' %}{{ site.url }}/drawings{% else %}{{ site.url }}{% endif %}'>
+      <svg class="icon icon-arrow_back"><use xlink:href="#icon-arrow_back"></use></svg>
+      <span class='v-top'>Back to the main page</span></a>
+      </div>
+  </div>
+
+</div>
+<div class="db dn-l">
+  {% include footer.html %}
+  </div>
+{% include icons.html %}
+{% include scripts.html %}
+
+    </body>
+</html>

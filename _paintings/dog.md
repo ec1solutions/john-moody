@@ -9,3 +9,4 @@ medium:
 sold: false
 date:
 ---
+![](/uploads/dog-and-a-boot-2-3.jpg){: width="1600" height="1200"}

@@ -7,5 +7,5 @@ width:
 height:
 medium:
 sold: false
-date:
+date: 2025-08-28 00:00:00
 ---
